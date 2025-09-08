@@ -1,6 +1,6 @@
-const http = require('http');
-http.get('http://example.com', (r) => {
-  let d = '';
-  r.on('data', (c) => d += c);
-  r.on('end', () => console.log(d));
-});
+const fs=require('fs');
+fs.readFile('index.html','utf8',(err,data)=>{
+    if(err)console.log("file not found");
+    else console.log("college website contest:/n",data);
+});1  
+
