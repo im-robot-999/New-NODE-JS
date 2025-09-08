@@ -1,6 +1,5 @@
-const http = require('http');
-http.get('http://example.com', (r) => {
-  let d = '';
-  r.on('data', (c) => d += c);
-  r.on('end', () => console.log(d));
-});
+const fs=require('fs');
+fs.readFile('index.html','utf8',(err,data)=>{
+    if(err)console.log("page not found");
+    else console.log("html content:/n",data);
+});1  
